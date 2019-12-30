@@ -17,7 +17,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "git@github.com:johnsundell/publish.git", .branch("master")),
+        .package(url: "https://github.com/johnsundell/publish.git", from: "0.1.0"),
         .package(url: "https://github.com/johnsundell/splash.git", from: "0.9.0")
     ],
     targets: [
