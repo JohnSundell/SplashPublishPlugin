@@ -4,7 +4,7 @@ A [Publish](https://github.com/johnsundell/publish) plugin that makes it easy to
 
 ## Installation
 
-To install it into your Publish project, add it as a dependency within your `Package.swift` manifest:
+To install it into your [Publish](https://github.com/johnsundell/publish) package, add it as a dependency within your `Package.swift` manifest:
 
 ```swift
 let package = Package(
@@ -36,7 +36,7 @@ For more information on how to use the Swift Package Manager, check out [this ar
 
 ## Usage
 
-The SplashPublishPlugin can be used as publishing pipeline. 
+The SplashPublishPlugin can be used as publishing pipeline with [Publish](https://github.com/johnsundell/publish). 
 
 ```swift
 import SplashPublishPlugin
