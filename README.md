@@ -36,13 +36,13 @@ For more information on how to use the Swift Package Manager, check out [this ar
 
 ## Usage
 
-The SplashPublishPlugin can be used as publishing pipeline with [Publish](https://github.com/johnsundell/publish). 
+The plugin can then be used within any publishing pipeline like this:
 
 ```swift
 import SplashPublishPlugin
 ...
 try DeliciousRecipes().publish(using: [
-    ...
     .installPlugin(.splash(withClassPrefix: "classPrefix"))
+    ...
 ])
 ```
