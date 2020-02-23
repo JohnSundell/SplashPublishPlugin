@@ -41,8 +41,8 @@ The plugin can then be used within any publishing pipeline like this:
 ```swift
 import SplashPublishPlugin
 ...
-try DeliciousRecipes().publish(using: [
-    .installPlugin(.splash(withClassPrefix: "classPrefix"))
+try DeliciousRecipes().publish(plugins: [
+    .splash(withClassPrefix: "classPrefix")
     ...
 ])
 ```
