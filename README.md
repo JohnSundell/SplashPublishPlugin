@@ -11,7 +11,7 @@ let package = Package(
     ...
     dependencies: [
         ...
-        .package(url: "https://github.com/johnsundell/splashpublishplugin", from: "0.1.0")
+        .package(name: "SplashPublishPlugin", url: "https://github.com/johnsundell/splashpublishplugin", from: "0.1.0")
     ],
     targets: [
         .target(
