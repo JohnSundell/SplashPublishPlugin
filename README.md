@@ -42,7 +42,11 @@ The plugin can then be used within any publishing pipeline like this:
 import SplashPublishPlugin
 ...
 try DeliciousRecipes().publish(using: [
-    .installPlugin(.splash(withClassPrefix: "classPrefix"))
+    
     ...
-])
+],plugins: [
+.splash(withClassPrefix: "")
+]
+
+)
 ```
