@@ -22,13 +22,17 @@ public extension Plugin {
 
 public extension Modifier {
     static func splashCodeBlocks(withFormat format: HTMLOutputFormat = .init()) -> Self {
-        let highlighter = SyntaxHighlighter(format: format)
+        var highlighter = SyntaxHighlighter(format: format)
 
         return Modifier(target: .codeBlocks) { html, markdown in
             var markdown = markdown.dropFirst("```".count)
 
             guard !markdown.hasPrefix("no-highlight") else {
                 return html
+            }
+            
+            if markdown.hasPrefix("yml") || markdown.hasPrefix("yaml") {
+                highlighter = SyntaxHighlighter(format: format, grammar: YamlGrammar())
             }
 
             markdown = markdown
