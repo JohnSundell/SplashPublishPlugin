@@ -46,3 +46,19 @@ try DeliciousRecipes().publish(using: [
     ...
 ])
 ```
+
+You can also add your custom Splash Grammars like so:
+
+```swift
+...
+    .installPlugin(.splash(withClassPrefix: "classPrefix", withCustomGrammars: [(YourGrammar(), "name")])
+...
+```
+
+where `name` is the name of the programming language that splash will use to look for in markdown. 
+You could use the grammar above like this:
+
+```markdown
+```name
+...
+```
